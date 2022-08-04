@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button{
+    cursor: pointer;
+}
+
+/* Responsividade */
+
+@media (max-width: 1080px){
+    body{
+        font-size: 93.75%%;
+    }
+}
+
+@media (max-width: 720px){
+    body{
+        font-size: 87.5%;
+    }
+}
