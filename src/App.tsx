@@ -2,13 +2,13 @@
 import './styles/global.css';
 
 // Components
-import { Register } from './pages/Register';
+import { NotAuth } from './routes/NotAuth';
 
 function App() {
 
   return (
     <div className="App">
-      <Register />
+      <NotAuth />
 
 
     </div>
