@@ -1,4 +1,5 @@
 // Página de registro
+import { useState } from 'react';
 
 // Styles
 import './style.css';
@@ -7,17 +8,25 @@ import './style.css';
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
 
-const Register = () => {
+type RegisterProps = {
+  postEmail: any
+}
 
-    return (
-        <div className="register">
-          <Input 
-            name="email"
-            type='email'
-          />
-          <Button type='submit'>Login</Button>
-        </div>
-      );
+const Register = ({ postEmail }: RegisterProps) => {
+
+  const [email, setEmail] = useState<string>(); // Variável para armazenar o email do usuário
+
+  return (
+    <div className="register">
+      <Input 
+        name="email"
+        type='email'
+        onChange={e => setEmail(e.target.value)}
+        value={email}
+      />
+      <Button type='submit' onClick={() => postEmail(email)}>Login</Button>
+    </div>
+  );
 };
 
 export {Register};
