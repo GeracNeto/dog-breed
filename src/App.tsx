@@ -14,14 +14,14 @@ function App() {
 
   const [userToken, setUserToken] = useState<string>(); // Variável para armazenar o token do usuário registrado
 
-    // Função que faz o método POST para postar o email do usuário na API
+  // Função que faz o método POST para postar o email do usuário na API
   const postEmail = async(email: string) => {
 
     await api.post('register', {
       email: email
     }).then(response => {
       setUserToken(response.data.user.token);
-      getList(response.data.user.token);
+      getList(response.data.user.token); // Colocar userToken aqui
       console.log(response.data);
     }).catch(error => {
       console.log(error);
