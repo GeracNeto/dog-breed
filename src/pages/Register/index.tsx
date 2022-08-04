@@ -1,5 +1,8 @@
 // Página de registro
 
+// Styles
+import './style.css';
+
 // Componentes
 import { Button } from "../components/Button";
 import { Input } from "../components/Input";
@@ -12,8 +15,7 @@ const Register = () => {
             name="email"
             type='email'
           />
-          <Button>Login</Button>
-
+          <Button type='submit'>Login</Button>
         </div>
       );
 };
