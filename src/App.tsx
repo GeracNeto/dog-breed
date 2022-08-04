@@ -1,14 +1,18 @@
 // Styles
 import './styles/global.css';
 
+// Components
+import { Register } from './pages/Register';
+
 function App() {
 
   return (
     <div className="App">
-      Hello World
+      <Register />
+
 
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
