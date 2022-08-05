@@ -1,3 +1,30 @@
 .list{
     height: 80vh;
 }
+
+.list ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    list-style: none;
+}
+
+li{
+    text-align: center;
+    width: 200px;
+    flex-grow: 1;
+    background-color: #eaf1f0a9;
+}
+
+li:hover{
+    background-color: #04f3c7b4;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    transition: ease-in-out 0;
+    
+}
+
+a{
+    text-decoration: none;
+}
