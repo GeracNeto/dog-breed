@@ -1,0 +1,18 @@
+header{
+    height: 10vh;
+
+    background-color: #1d3d3770;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header a{
+    color: #e4f1ef;
+    text-decoration: none;
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 3rem;
+    word-spacing: 20px;
+    letter-spacing: 8px;
+}
