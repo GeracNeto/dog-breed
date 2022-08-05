@@ -43,6 +43,7 @@ const Register = () => {
               type='email'
               placeholder='Enter email'
               autoFocus
+              required
               onChange={e => setEmail(e.target.value)}
               value={email}
             />
