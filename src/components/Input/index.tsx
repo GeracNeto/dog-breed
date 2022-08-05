@@ -1,3 +1,6 @@
+//Styles
+import './style.css';
+
 import { InputHTMLAttributes } from "react";
 
 type InputProps = InputHTMLAttributes<HTMLInputElement>;
@@ -5,7 +8,6 @@ type InputProps = InputHTMLAttributes<HTMLInputElement>;
 const Input = ({name, ...rest}: InputProps) => {
   return (
     <label htmlFor={name} id="login-input">
-        Login
         <input {...rest} />
     </label>
   );
