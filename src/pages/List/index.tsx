@@ -1,10 +1,13 @@
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { Chihuahua } from "../Chihuahua";
 
+// Styles
+import './style.css';
+
 const List = () => {
 
     return(
-        <div>
+        <div className="list">
             <ul>
                 <li><Link to='chihuahua'>Chihuahua</Link></li>
                 <li>Husky</li>
