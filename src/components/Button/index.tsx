@@ -1,3 +1,6 @@
+// Styles
+import './style.css';
+
 import { ButtonHTMLAttributes } from "react";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
