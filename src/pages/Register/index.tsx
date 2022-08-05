@@ -1,5 +1,6 @@
 // Página de registro
-import { useState } from 'react';
+import { FormEvent, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // Styles
 import './style.css';
@@ -8,24 +9,40 @@ import './style.css';
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
 
-type RegisterProps = {
-  postEmail: any
+//API
+import { api } from '../../service/api';
+
+const Register = () => {
+
+  const [email, setEmail] = useState<string>(''); // Variável para armazenar o email do usuário
+  const [userToken, setUserToken] = useState<string>(); // Variável para armazenar o token do usuário registrado
+
+  const navigate = useNavigate();
+
+  const handleLogin = (event: FormEvent) => {
+    event.preventDefault();
+
+    api.post('register', {
+    email: email
+  }).then(response => {
+    setUserToken(response.data.user.token);
+    console.log(response.data);
+    navigate('/list');
+  }).catch(error => {
+    console.log(error);
+  })
 }
 
-const Register = ({ postEmail }: RegisterProps) => {
-
-  const [email, setEmail] = useState<string>(); // Variável para armazenar o email do usuário
-
   return (
-    <div className="register">
+    <form className="register" onSubmit={handleLogin}>
       <Input 
         name="email"
         type='email'
         onChange={e => setEmail(e.target.value)}
         value={email}
       />
-      <Button type='submit' onClick={() => postEmail(email)}>Login</Button>
-    </div>
+      <Button type='submit'>Login</Button>
+    </form>
   );
 };
 
