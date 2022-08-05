@@ -1,0 +1,24 @@
+#login-button{
+    width: 200px;
+
+    line-height: 2;
+    font-family: 'Mouse Memoirs', sans-serif;
+    letter-spacing: 3px;
+    font-size: 1.5rem;
+
+    border-radius: 30px;
+    border: 1px solid #1d3d37c0;
+
+    background-color: #f9fdfcbd;
+}
+
+#login-button:hover{
+    background-color: #04f3c779;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#login-button:active{
+    transform: translateY(5px);
+    box-shadow: 0 5px 10px rgba(7, 19, 194, 0.5);
+}
