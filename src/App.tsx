@@ -1,5 +1,7 @@
 // Styles
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Footer } from './components/Footer';
+import { Header } from './components/Header';
 import { Chihuahua } from './pages/Chihuahua';
 import { List } from './pages/List';
 import { Register } from './pages/Register';
@@ -23,6 +25,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Register />} />
@@ -30,7 +33,7 @@ function App() {
           <Route path='/list/chihuahua' element={<Chihuahua />} />
         </Routes>
       </BrowserRouter>
-
+      <Footer />
     </div>
   );
 };
