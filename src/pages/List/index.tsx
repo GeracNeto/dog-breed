@@ -10,23 +10,12 @@ const List = () => {
         <div className="list">
             <ul>
                 <li><Link to='chihuahua'>Chihuahua</Link></li>
-                <li>Husky</li>
-                <li>Labrador</li>
-                <li>Pug</li>
+                <li><Link to='Husky'>Husky</Link></li>
+                <li><Link to='Labrador'>Labrador</Link></li>
+                <li><Link to='Pug'>Pug</Link></li>
             </ul>
         </div>
     );
 };
 
 export {List};
-
-/*
-        <div>
-            <ul>
-                <li>Chihuahua</li>
-                <li>Husky</li>
-                <li>Labrador</li>
-                <li>Pug</li>
-            </ul>
-        </div>
-*/
