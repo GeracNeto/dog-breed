@@ -9,10 +9,10 @@ const List = () => {
     return(
         <div className="list">
             <ul>
-                <li><Link to='chihuahua'>Chihuahua</Link></li>
-                <li><Link to='Husky'>Husky</Link></li>
-                <li><Link to='Labrador'>Labrador</Link></li>
-                <li><Link to='Pug'>Pug</Link></li>
+                <Link to='chihuahua'><li>Chihuahua</li></Link>
+                <Link to='Husky'><li>Husky</li></Link>
+                <Link to='Labrador'><li>Labrador</li></Link>
+                <Link to='Pug'><li>Pug</li></Link>
             </ul>
         </div>
     );
