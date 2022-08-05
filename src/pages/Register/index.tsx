@@ -34,15 +34,22 @@ const Register = () => {
 }
 
   return (
-    <form className="register" onSubmit={handleLogin}>
-      <Input 
-        name="email"
-        type='email'
-        onChange={e => setEmail(e.target.value)}
-        value={email}
-      />
-      <Button type='submit'>Login</Button>
-    </form>
+      <form className="register" onSubmit={handleLogin}>
+        <fieldset>
+          <div className='register-container'>
+            <h1>Welcome</h1>
+            <Input 
+              name="email"
+              type='email'
+              placeholder='Enter email'
+              autoFocus
+              onChange={e => setEmail(e.target.value)}
+              value={email}
+            />
+            <Button type='submit'>Login</Button>
+          </div>
+        </fieldset>
+      </form>
   );
 };
 
