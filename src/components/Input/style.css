@@ -1,0 +1,8 @@
+#login-input input{
+    text-align: center;
+
+    background-color: #f9fdfcbd;
+
+    border: 1px solid #1d3d37c0;
+    border-radius: 10px;
+}
