@@ -18,6 +18,7 @@ const List = () => {
 
     const [breed, setBreed] = useState<string>('');
     const [dogs, setDogs] = useState<string[]>([]);
+    const [sum, setSum] = useState<number>(0);
 
     useEffect(() => {
         // Retorna a lista das raças
@@ -28,27 +29,29 @@ const List = () => {
              console.log(response.data);
              setDogs(response.data.list);
            })
-    }, [breed])
+    }, [breed]);
 
     return(
         <div className="list">
-            <ul>
+            <ul className="list-breed">
                 <li onClick={() => setBreed('chihuahua')}>Chihuahua</li>
                 <li onClick={() => setBreed('husky')}>Husky</li>
                 <li onClick={() => setBreed('labrador')}>Labrador</li>
                 <li onClick={() => setBreed('pug')}>Pug</li>
                 
             </ul>
-            {dogs.map((dog) => (<img src={dog} alt={breed} key={dog}/>))}          
+            <div className="photos">
+                <img src={dogs[sum]} alt="Dogs-Photos"/>
+                <div className="buttons">
+                    <button onClick={() => setSum(sum - 1)}>Back</button>
+                    <button onClick={() => setSum(sum + 1)}>Next</button>
+                </div>
+            </div>
+                      
         </div>
     );
 };
 
 export {List};
 
-/*
-                <Link to='chihuahua'><li>Chihuahua</li></Link>
-                <Link to='husky' onClick={() => setBreed('husky')}><li>Husky</li></Link>
-                <Link to='labrador'><li>Labrador</li></Link>
-                <Link to='pug'><li>Pug</li></Link>
-*/
+// {dogs.map((dog) => (<img src={dog} alt={breed} key={dog}/>))}
