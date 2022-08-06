@@ -1,5 +1,5 @@
 // Página de registro
-import { FormEvent, useState } from 'react';
+import { FormEvent, useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 // Styles
@@ -11,26 +11,22 @@ import { Input } from "../../components/Input";
 
 //API
 import { api } from '../../service/api';
+import { AuthContext } from '../../context/AuthContext';
 
 const Register = () => {
+
+  const {signIn} = useContext(AuthContext);
 
   const [email, setEmail] = useState<string>(''); // Variável para armazenar o email do usuário
   const [userToken, setUserToken] = useState<string>(); // Variável para armazenar o token do usuário registrado
 
   const navigate = useNavigate();
 
-  const handleLogin = (event: FormEvent) => {
+  const handleLogin = async(event: FormEvent) => {
     event.preventDefault();
 
-    api.post('register', {
-    email: email
-  }).then(response => {
-    setUserToken(response.data.user.token);
-    console.log(response.data);
+    await signIn(email);
     navigate('/list');
-  }).catch(error => {
-    console.log(error);
-  })
 }
 
   return (
