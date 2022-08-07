@@ -5,7 +5,7 @@ import { ButtonHTMLAttributes } from "react";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
-const Button = ({id, children, ...rest}: ButtonProps) => {
+const LoginButton = ({id, children, ...rest}: ButtonProps) => {
   return (
     <button id="login-button" {...rest}>
         {children}
@@ -13,4 +13,4 @@ const Button = ({id, children, ...rest}: ButtonProps) => {
   );
 };
 
-export {Button};
+export {LoginButton};
