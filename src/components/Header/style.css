@@ -2,10 +2,12 @@ header{
     height: 10vh;
 
     background-color: #1d3d3770;
+}
 
+header h1{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 header a{
@@ -15,4 +17,8 @@ header a{
     font-size: 3rem;
     word-spacing: 20px;
     letter-spacing: 8px;
+}
+
+header img{
+    width: 80px;
 }
