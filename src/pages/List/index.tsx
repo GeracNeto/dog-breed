@@ -20,6 +20,23 @@ const List = () => {
     const [dogs, setDogs] = useState<string[]>([]);
     const [sum, setSum] = useState<number>(0);
 
+    console.log(sum)
+
+    const handleBack = () => {
+        if(sum > 0){
+            setSum(sum-1);
+        }
+    }
+
+    const handleNext = () => {
+        if(sum < dogs.length-1){
+            setSum(sum+1);
+        }
+        else{
+            setSum(0);
+        }
+    }
+
     useEffect(() => {
         // Retorna a lista das raças
          api.get<DogProps>('list', {
@@ -41,10 +58,10 @@ const List = () => {
                 
             </ul>
             <div className="photos">
-                <img src={dogs[sum]} alt="Dogs-Photos"/>
+                    <img src={dogs[sum]} alt="Dogs-Photos"/>
                 <div className="buttons">
-                    <button onClick={() => setSum(sum - 1)}>Back</button>
-                    <button onClick={() => setSum(sum + 1)}>Next</button>
+                    <button onClick={handleBack}>Back</button>
+                    <button onClick={handleNext}>Next</button>
                 </div>
             </div>
                       
