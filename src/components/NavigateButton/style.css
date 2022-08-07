@@ -1,0 +1,22 @@
+#navigate-button{
+    width: 100px;
+
+    padding: 5px;
+    letter-spacing: 3px;
+
+    border: 1px solid #1d3d37c0;
+    border-radius: 10px;
+
+    background-color: #f9fdfcbd;
+}
+
+#navigate-button:hover{
+    background-color: #04f3c779;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#navigate-button:active{
+    transform: translateY(3px);
+    box-shadow: 0 5px 10px rgba(7, 194, 169, 0.829);
+}
