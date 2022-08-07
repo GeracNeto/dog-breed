@@ -2,7 +2,7 @@ footer{
     height: 10vh;
 
     display: flex;
-    justify-content: space-evenly;
+    justify-content:center;
     align-items: center;
 
     background-color: #1d3d3770;
@@ -11,6 +11,15 @@ footer{
 footer p{
     font-size: 1rem;
     color: #e4f1ef;
+}
+
+footer a{
+    display: flex;
+    padding: 10px;
+}
+
+footer img{
+    width: 50px;
 }
 
 
