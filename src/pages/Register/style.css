@@ -17,8 +17,8 @@
 }
 
 .register-container{
-    height: 600px;
-    width: 400px;
+    height: 70vh;
+    width: 500px;
 
     display: flex;
     flex-direction: column;
@@ -32,3 +32,8 @@
     letter-spacing: 10px;
     color: #222423;
 }
+
+.register-container img{
+    width: 200px;
+}
+

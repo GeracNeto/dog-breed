@@ -6,12 +6,15 @@ import { useNavigate } from 'react-router-dom';
 import './style.css';
 
 // Componentes
-import { Button } from "../../components/Button";
+import { LoginButton } from "../../components/LoginButton";
 import { Input } from "../../components/Input";
 
-//API
+// API
 import { api } from '../../service/api';
 import { AuthContext } from '../../context/AuthContext';
+
+// Images
+import Dog from "../../assets/images/dog.png";
 
 const Register = () => {
 
@@ -34,6 +37,7 @@ const Register = () => {
         <fieldset>
           <div className='register-container'>
             <h1>Welcome</h1>
+            <img src={Dog} alt="Dog-img" />
             <Input 
               name="email"
               type='email'
@@ -43,7 +47,7 @@ const Register = () => {
               onChange={e => setEmail(e.target.value)}
               value={email}
             />
-            <Button type='submit'>Login</Button>
+            <LoginButton type='submit'>Login</LoginButton>
           </div>
         </fieldset>
       </form>
