@@ -1,13 +1,14 @@
-// Styles
-import { useContext, useEffect } from 'react';
-import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
-import { Footer } from './components/Footer';
-import { Header } from './components/Header';
-import { AuthContext, AuthProvider } from './context/AuthContext';
-import { Chihuahua } from './pages/Chihuahua';
+import { useContext } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { AuthContext } from './context/AuthContext';
 import { List } from './pages/List';
 import { Register } from './pages/Register';
 
+// Components
+import { Footer } from './components/Footer';
+import { Header } from './components/Header';
+
+// Styles
 import './styles/global.css';
 
 function App() {

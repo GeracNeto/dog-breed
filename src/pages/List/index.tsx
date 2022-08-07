@@ -1,9 +1,13 @@
-import { ReactNode, useContext, useEffect, useState } from "react";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-import { NavigateButton } from "../../components/NavigateButton";
+// Página de List
+
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
+
+// Components
+import { NavigateButton } from "../../components/NavigateButton";
+
+// API
 import { api } from "../../service/api";
-import { Chihuahua } from "../Chihuahua";
 
 // Styles
 import './style.css';
@@ -20,8 +24,6 @@ const List = () => {
     const [breed, setBreed] = useState<string>('');
     const [dogs, setDogs] = useState<string[]>([]);
     const [sum, setSum] = useState<number>(0);
-
-    console.log(sum)
 
     const handleBack = () => {
         if(sum > 0){
@@ -71,5 +73,3 @@ const List = () => {
 };
 
 export {List};
-
-// {dogs.map((dog) => (<img src={dog} alt={breed} key={dog}/>))}

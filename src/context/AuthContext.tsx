@@ -1,5 +1,4 @@
-import { createContext, ReactNode, useEffect, useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { createContext, ReactNode, useMemo, useState } from "react";
 import { api } from "../service/api";
 
 type UserProps = {
