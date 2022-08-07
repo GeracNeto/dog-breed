@@ -1,5 +1,6 @@
 import { ReactNode, useContext, useEffect, useState } from "react";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { NavigateButton } from "../../components/NavigateButton";
 import { AuthContext } from "../../context/AuthContext";
 import { api } from "../../service/api";
 import { Chihuahua } from "../Chihuahua";
@@ -60,8 +61,8 @@ const List = () => {
             <div className="photos">
                     <img src={dogs[sum]} alt="Dogs-Photos"/>
                 <div className="buttons">
-                    <button onClick={handleBack}>Back</button>
-                    <button onClick={handleNext}>Next</button>
+                    <NavigateButton onClick={handleBack}>Back</NavigateButton>
+                    <NavigateButton onClick={handleNext}>Next</NavigateButton>
                 </div>
             </div>
                       
