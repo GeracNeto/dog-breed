@@ -29,16 +29,3 @@ function App() {
 };
 
 export default App;
-
-/*
-          {!user.token ? (
-            <Routes location='/list'>
-              <Route path='/list' element={<List />} />
-              <Route path='/list/chihuahua' element={<Chihuahua />} />
-            </Routes>
-          ) : (
-            <Routes location='/'>
-              <Route path='/' element={<Register />} />
-            </Routes>
-          )}
-*/
