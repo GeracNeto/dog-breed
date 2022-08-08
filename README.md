@@ -1,5 +1,7 @@
 # Desafio Dog Breed
-Repositório para colocar a resolução do <a href="https://gitlab.com/q9-tecnologia/desafios/mobile/desafio-dogbreed">desafio-dog-breed</a> da empresa Q9 Tecnologia
+## Repositório para colocar a resolução do <a href="https://gitlab.com/q9-tecnologia/desafios/mobile/desafio-dogbreed">desafio-dog-breed</a> da empresa Q9 Tecnologia
+
+Projeot feito em React-typescript com vite
 
 <hr>
 
